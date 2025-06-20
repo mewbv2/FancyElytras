@@ -1,0 +1,179 @@
+# Messages Configuration
+# All user-facing text and messages
+# Supports color codes (&) and placeholders
+
+# General messages
+general:
+  prefix: "&8[&6FancyElytra&8] "
+  no-permission: "&cYou don't have permission to do that!"
+  player-only: "&cThis command can only be used by players!"
+  player-not-found: "&cPlayer '&7{player}&c' not found!"
+  invalid-arguments: "&cInvalid arguments! Use &7{usage}"
+  feature-disabled: "&cThis feature is currently disabled."
+  world-disabled: "&cFancy elytras are disabled in this world."
+
+# Plugin status messages
+plugin:
+  enabled: "&aFancyElytra has been enabled successfully!"
+  disabled: "&cFancyElytra has been disabled."
+  reloaded: "&aFancyElytra configuration reloaded successfully!"
+  reload-failed: "&cFailed to reload configuration. Check console for errors."
+
+# Command messages
+commands:
+  help:
+    header: "&6&m----&r &6FancyElytra Commands &6&m----"
+    footer: "&6&m---------------------------------"
+    command-format: "&e/{command} &7- &f{description}"
+
+  give:
+    success: "&aGave fancy elytra to &e{player}&a!"
+    received: "&aYou received a fancy elytra!"
+    already-has: "&e{player} &calready has a fancy elytra in their inventory."
+    inventory-full: "&cCannot give elytra - &e{player}&c's inventory is full!"
+
+  particle:
+    no-elytra: "&cYou must be holding or wearing an elytra to change particles!"
+    not-fancy: "&cThis elytra is not a fancy elytra!"
+    changed: "&aParticle effect changed to &e{particle}&a!"
+    gui-opened: "&aParticle selection menu opened!"
+
+  fuel:
+    no-elytra: "&cYou must be holding or wearing an elytra to manage fuel!"
+    not-fancy: "&cThis elytra is not a fancy elytra!"
+    current-fuel: "&7Your elytra has &a{fuel}&7/&a{max_fuel} &7fuel remaining."
+    refueled: "&aRefueled your elytra by &e{amount} &ausing &e{items}x {item}&a!"
+    no-fuel-items: "&cYou don't have any fuel items in your inventory!"
+    insufficient-money: "&cYou need &e{cost} &cto purchase &e{amount} &cfuel!"
+    purchased-fuel: "&aPurchased &e{amount} &afuel for &e{cost}&a!"
+
+# Elytra system messages
+elytra:
+  created: "&aFancy elytra created successfully!"
+  converted: "&aYour elytra has been converted to a fancy elytra!"
+  removed: "&cFancy elytra effects removed."
+
+  # Fuel-related messages
+  fuel:
+    empty: "&c⚠ Your elytra is out of fuel!"
+    low: "&e⚠ Your elytra fuel is running low! &7({fuel} remaining)"
+    critical: "&c⚠ Your elytra fuel is critically low! &7({fuel} remaining)"
+    refill-auto: "&aAuto-refueled elytra using &e{items}x {item}"
+
+  # Takeoff messages
+  takeoff:
+    countdown: "&e⚠ Takeoff in &c{seconds} &eseconds... &7(Keep sneaking!)"
+    success: "&a✈ Takeoff successful!"
+    cancelled: "&cTakeoff cancelled."
+    insufficient-fuel: "&cNot enough fuel for takeoff! &7(Need {required}, have {current})"
+    cooldown: "&cYou must wait &e{seconds} &cseconds before taking off again!"
+    no-space: "&cNot enough space above you for takeoff!"
+    failed: "&cTakeoff failed!"
+
+# GUI messages
+gui:
+  particle-menu:
+    title: "&6&lParticle Selection"
+
+    # Particle item descriptions
+    locked: "&cLocked - No Permission"
+    available: "&aClick to select!"
+    current: "&e&lCurrently Selected"
+
+    # Navigation
+    previous-page: "&e← Previous Page"
+    next-page: "&eNext Page →"
+    close-menu: "&cClose Menu"
+
+    # Actions
+    particle-selected: "&aSelected &e{particle} &aparticle effect!"
+    no-permission: "&cYou don't have permission for &e{particle}&c!"
+
+# Economy messages
+economy:
+  not-available: "&cEconomy features are not available on this server."
+  insufficient-funds: "&cYou don't have enough money! &7(Need {required}, have {current})"
+
+  fuel-shop:
+    purchase-success: "&aPurchased &e{amount} &afuel for &e{cost}&a!"
+    purchase-failed: "&cFuel purchase failed!"
+    bulk-discount: "&a{discount}% bulk discount applied!"
+
+  elytra-shop:
+    purchase-success: "&aPurchased fancy elytra with &e{particle} &aparticle for &e{cost}&a!"
+    purchase-failed: "&cElytra purchase failed!"
+
+# Error messages
+errors:
+  database: "&cDatabase error occurred. Please contact an administrator."
+  config: "&cConfiguration error. Please check your config files."
+  permission: "&cPermission system error. Please contact an administrator."
+  economy: "&cEconomy system error. Please contact an administrator."
+
+  # Specific errors
+  elytra-not-found: "&cCould not find elytra data!"
+  invalid-particle: "&cInvalid particle type: &7{particle}"
+  invalid-fuel-amount: "&cInvalid fuel amount: &7{amount}"
+  save-failed: "&cFailed to save data. Please try again."
+  load-failed: "&cFailed to load data. Please contact an administrator."
+
+# Success messages
+success:
+  data-saved: "&aData saved successfully!"
+  data-loaded: "&aData loaded successfully!"
+  backup-created: "&aBackup created successfully!"
+  migration-complete: "&aData migration completed successfully!"
+
+# Admin messages
+admin:
+  debug-enabled: "&aDebug mode enabled."
+  debug-disabled: "&cDebug mode disabled."
+  maintenance-mode: "&ePlugin is in maintenance mode."
+
+  # Statistics
+  stats:
+    header: "&6&m----&r &6FancyElytra Statistics &6&m----"
+    players-online: "&ePlayers with fancy elytras: &a{count}"
+    total-elytras: "&eTotal fancy elytras: &a{count}"
+    particles-rendered: "&eParticles rendered/sec: &a{count}"
+    database-queries: "&eDatabase queries/sec: &a{count}"
+
+  # Maintenance
+  maintenance:
+    backup-started: "&eStarting data backup..."
+    backup-completed: "&aData backup completed successfully!"
+    cleanup-started: "&eCleaning up old data..."
+    cleanup-completed: "&aData cleanup completed!"
+
+# Update messages
+updates:
+  available: "&aA new version of FancyElytra is available!"
+  current-version: "&7Current: &e{current}"
+  latest-version: "&7Latest: &a{latest}"
+  download-url: "&7Download: &b{url}"
+  no-updates: "&7You are running the latest version."
+
+# Debug messages (only shown when debug mode is enabled)
+debug:
+  prefix: "&8[&7DEBUG&8] "
+  player-data-loaded: "&7Loaded data for player: &e{player}"
+  player-data-saved: "&7Saved data for player: &e{player}"
+  elytra-created: "&7Created fancy elytra for: &e{player}"
+  particle-changed: "&7{player} changed particle to: &e{particle}"
+  fuel-consumed: "&7{player} consumed &e{amount} &7fuel"
+  takeoff-attempt: "&7{player} attempting takeoff..."
+  database-query: "&7Database query: &e{query}"
+
+# Placeholders help
+placeholders:
+  help:
+    - "&7Available placeholders:"
+    - "&e{player} &7- Player name"
+    - "&e{particle} &7- Current particle effect"
+    - "&e{fuel} &7- Current fuel amount"
+    - "&e{max_fuel} &7- Maximum fuel capacity"
+    - "&e{cost} &7- Cost of operation"
+    - "&e{amount} &7- Amount of items/fuel"
+    - "&e{item} &7- Item name"
+    - "&e{world} &7- World name"
+    - "&e{prefix} &7- Plugin prefix"

@@ -1,0 +1,107 @@
+
+# FancyElytra Configuration File
+# Author: YourName
+# Version: 1.0.0
+
+# General plugin settings
+general:
+  # Check for plugin updates on startup
+  check-updates: true
+
+  # Debug mode - enables detailed logging
+  debug: false
+
+  # Maximum speed multiplier for fancy elytras
+  max-speed-multiplier: 2.0
+
+  # Acceleration rate for speed increase
+  acceleration-rate: 0.1
+
+  # List of worlds where fancy elytras are disabled
+  disabled-worlds:
+    - "disabled_world_example"
+
+# Elytra-specific settings
+elytra:
+  # If true, ALL elytras become fancy elytras
+  # If false, only elytras with NBT data are fancy
+  all-elytras-fancy: false
+
+  # Enable sneak-to-takeoff feature
+  sneak-takeoff:
+    enabled: true
+    countdown-seconds: 3
+    require-sneak-during-countdown: true
+    show-countdown-messages: true
+
+  # Takeoff force settings
+  takeoff-force:
+    horizontal-multiplier: 1.5
+    vertical-force: 1.2
+
+  # Elytra durability settings
+  durability:
+    # Whether fancy elytras take durability damage
+    take-damage: true
+    # Damage per second of flight (0 to disable)
+    damage-per-second: 0
+
+  # Display particles even when elytra has no fuel
+  show-particles-without-fuel: false
+
+  # Default elytra properties
+  default:
+    name: "&6&lFancy Elytra"
+    lore:
+      - "&7A magical elytra with enhanced capabilities"
+      - "&7Particle: &e{particle}"
+      - "&7Fuel: &a{fuel}&7/&a{max_fuel}"
+      - ""
+      - "&eRight-click to change particle effects"
+
+# Takeoff system settings
+takeoff:
+  # Cooldown between takeoff attempts (in seconds)
+  cooldown: 5
+
+  # Minimum space required above player for takeoff
+  min-space-above: 3
+
+  # Sound effects during takeoff
+  sounds:
+    countdown: "BLOCK_NOTE_BLOCK_PLING"
+    takeoff: "ENTITY_ENDER_DRAGON_FLAP"
+    failed: "ENTITY_VILLAGER_NO"
+
+# Performance settings
+performance:
+  # Maximum particles rendered per player per tick
+  max-particles-per-tick: 5
+
+  # Maximum distance for particle rendering
+  particle-render-distance: 50
+
+  # Async data operations
+  async-database: true
+
+  # Cache settings
+  cache:
+    player-data-timeout: 300 # seconds
+    permission-cache-timeout: 60 # seconds
+
+# World management
+worlds:
+  # Per-world settings override global settings
+  world-specific:
+  # Example:
+  # world_nether:
+  #   max-speed-multiplier: 1.5
+  #   particles-enabled: false
+
+# Update settings
+updates:
+  # Notify ops about available updates
+  notify-ops: true
+
+  # Check interval in hours
+  check-interval: 24

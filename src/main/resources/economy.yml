@@ -1,0 +1,192 @@
+# Economy Configuration
+# Configure Vault integration and money-based features
+
+# General economy settings
+economy:
+  # Enable/disable economy features (requires Vault)
+  enabled: true
+
+  # Currency symbol/name for display
+  currency-symbol: "$"
+  currency-name: "dollars"
+
+# Fuel purchasing with money
+fuel-shop:
+  # Enable buying fuel with money
+  enabled: true
+
+  # Price per fuel unit
+  price-per-fuel: 0.10
+
+  # Bulk purchase discounts
+  bulk-discounts:
+    enabled: true
+    tiers:
+      # Buy 100+ fuel units, get 5% discount
+      100:
+        discount-percent: 5
+
+      # Buy 500+ fuel units, get 10% discount
+      500:
+        discount-percent: 10
+
+      # Buy 1000+ fuel units, get 15% discount
+      1000:
+        discount-percent: 15
+
+      # Buy 2500+ fuel units, get 20% discount
+      2500:
+        discount-percent: 20
+
+  # Quick purchase presets
+  quick-purchase:
+    enabled: true
+    presets:
+      small:
+        amount: 100
+        display-name: "&aSmall Refuel"
+
+      medium:
+        amount: 500
+        display-name: "&eMedium Refuel"
+
+      large:
+        amount: 1000
+        display-name: "&6Large Refuel"
+
+      full:
+        amount: -1 # -1 means fill to max capacity
+        display-name: "&cFull Tank"
+
+# Elytra purchasing
+elytra-shop:
+  # Enable buying fancy elytras with money
+  enabled: true
+
+  # Base price for a fancy elytra
+  base-price: 1000.0
+
+  # Price modifiers for different particles
+  particle-prices:
+    FLAME: 0.0 # No extra cost
+    DRIP_WATER: 50.0
+    DRIP_LAVA: 75.0
+    HEART: 100.0
+    NOTE: 25.0
+    SMOKE_NORMAL: 0.0
+    FIREWORKS_SPARK: 200.0
+    CRIT: 150.0
+    ENCHANTMENT_TABLE: 300.0
+    END_ROD: 250.0
+    DRAGON_BREATH: 500.0
+    BUBBLE_COLUMN_UP: 100.0
+    DOLPHIN: 150.0
+    CAMPFIRE_COSY_SMOKE: 50.0
+    ASH: 75.0
+    FALLING_DUST: 100.0
+    TOTEM: 400.0
+    VILLAGER_ANGRY: 25.0
+    ELECTRIC_SPARK: 175.0
+    NONE: 0.0
+
+# Subscription system (optional)
+subscriptions:
+  enabled: false
+
+  # Subscription tiers
+  tiers:
+    basic:
+      price: 100.0
+      duration-days: 30
+      benefits:
+        fuel-per-day: 100
+        particle-access:
+          - "FLAME"
+          - "SMOKE_NORMAL"
+          - "NONE"
+
+    premium:
+      price: 250.0
+      duration-days: 30
+      benefits:
+        fuel-per-day: 300
+        particle-access:
+          - "FLAME"
+          - "DRIP_WATER"
+          - "DRIP_LAVA"
+          - "HEART"
+          - "NOTE"
+          - "SMOKE_NORMAL"
+          - "CRIT"
+          - "NONE"
+
+    vip:
+      price: 500.0
+      duration-days: 30
+      benefits:
+        fuel-per-day: 1000
+        particle-access: "ALL"
+
+# Transaction settings
+transactions:
+  # Confirmation for large purchases
+  confirmation:
+    enabled: true
+    # Require confirmation for purchases above this amount
+    threshold: 500.0
+    # Confirmation timeout in seconds
+    timeout: 30
+
+  # Transaction logging
+  logging:
+    enabled: true
+    # Log to file
+    file-logging: true
+    # Log to console
+    console-logging: false
+
+  # Refund system
+  refunds:
+    enabled: false
+    # Allow refunds within this time (in minutes)
+    refund-window: 5
+    # Refund percentage (100 = full refund)
+    refund-percentage: 80
+
+# Admin tools
+admin:
+  # Give free fuel to players
+  free-fuel:
+    enabled: true
+    # Requires permission: fancyelytra.admin.freefuel
+
+  # Set fuel prices dynamically
+  dynamic-pricing:
+    enabled: false
+    # Adjust prices based on server economy
+    auto-adjust: false
+    min-price: 0.01
+    max-price: 1.00
+
+# Integration settings
+integration:
+  # Vault settings
+  vault:
+    # Preferred economy plugin (leave empty for auto-detection)
+    preferred-economy: ""
+
+    # Fallback behavior when economy is unavailable
+    fallback-mode: "disable" # Options: disable, free, items-only
+
+  # Other economy plugins
+  other-plugins:
+    # PlayerPoints integration
+    playerpoints:
+      enabled: false
+      conversion-rate: 1.0 # 1 dollar = X points
+
+    # Tokens integration
+    tokens:
+      enabled: false
+      conversion-rate: 10.0 # 1 dollar = X tokens
+

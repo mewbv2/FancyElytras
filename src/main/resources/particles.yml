@@ -1,0 +1,267 @@
+# Particle Configuration
+# Configure particle effects and GUI settings
+
+# Available particles and their properties
+particles:
+  FLAME:
+    display-name: "&cFlame"
+    description:
+      - "&7Classic fire particles"
+      - "&7Perfect for dragon-like effects"
+    gui-item: "FIRE_CHARGE"
+    permission: "fancyelytra.particle.flame"
+    enabled: true
+    spawn-rate: 3 # particles per tick
+
+  DRIP_WATER:
+    display-name: "&9Water Drip"
+    description:
+      - "&7Cool water droplets"
+      - "&7Great for aquatic themes"
+    gui-item: "WATER_BUCKET"
+    permission: "fancyelytra.particle.drip_water"
+    enabled: true
+    spawn-rate: 2
+
+  DRIP_LAVA:
+    display-name: "&6Lava Drip"
+    description:
+      - "&7Hot lava droplets"
+      - "&7Dangerous and stylish"
+    gui-item: "LAVA_BUCKET"
+    permission: "fancyelytra.particle.drip_lava"
+    enabled: true
+    spawn-rate: 2
+
+  HEART:
+    display-name: "&dHeart"
+    description:
+      - "&7Lovely heart particles"
+      - "&7Spread the love while flying"
+    gui-item: "RED_DYE"
+    permission: "fancyelytra.particle.heart"
+    enabled: true
+    spawn-rate: 1
+
+  NOTE:
+    display-name: "&eNote"
+    description:
+      - "&7Musical note particles"
+      - "&7Fly with a soundtrack"
+    gui-item: "NOTE_BLOCK"
+    permission: "fancyelytra.particle.note"
+    enabled: true
+    spawn-rate: 2
+
+  SMOKE_NORMAL:
+    display-name: "&8Smoke"
+    description:
+      - "&7Normal smoke particles"
+      - "&7Classic and subtle"
+    gui-item: "COBWEB"
+    permission: "fancyelytra.particle.smoke"
+    enabled: true
+    spawn-rate: 4
+
+  FIREWORKS_SPARK:
+    display-name: "&6Firework"
+    description:
+      - "&7Spectacular firework sparks"
+      - "&7Celebrate your flight"
+    gui-item: "FIREWORK_ROCKET"
+    permission: "fancyelytra.particle.firework"
+    enabled: true
+    spawn-rate: 3
+
+  CRIT:
+    display-name: "&eCritical"
+    description:
+      - "&7Critical hit particles"
+      - "&7Show your combat prowess"
+    gui-item: "GOLDEN_SWORD"
+    permission: "fancyelytra.particle.crit"
+    enabled: true
+    spawn-rate: 2
+
+  ENCHANTMENT_TABLE:
+    display-name: "&5Enchanted"
+    description:
+      - "&7Mystical enchantment particles"
+      - "&7Channel magical energies"
+    gui-item: "ENCHANTING_TABLE"
+    permission: "fancyelytra.particle.enchantment_table"
+    enabled: true
+    spawn-rate: 2
+
+  END_ROD:
+    display-name: "&fEnd Rod"
+    description:
+      - "&7Ethereal end rod particles"
+      - "&7Touch of the End dimension"
+    gui-item: "END_ROD"
+    permission: "fancyelytra.particle.end_rod"
+    enabled: true
+    spawn-rate: 2
+
+  DRAGON_BREATH:
+    display-name: "&5Dragon Breath"
+    description:
+      - "&7Powerful dragon breath"
+      - "&7Embrace your inner dragon"
+    gui-item: "DRAGON_BREATH"
+    permission: "fancyelytra.particle.dragon_breath"
+    enabled: true
+    spawn-rate: 3
+
+  BUBBLE_COLUMN_UP:
+    display-name: "&bBubbles"
+    description:
+      - "&7Rising bubble particles"
+      - "&7Underwater flight feeling"
+    gui-item: "SOUL_SAND"
+    permission: "fancyelytra.particle.bubble_column_up"
+    enabled: true
+    spawn-rate: 3
+
+  DOLPHIN:
+    display-name: "&3Dolphin"
+    description:
+      - "&7Playful dolphin particles"
+      - "&7Swift and graceful"
+    gui-item: "DOLPHIN_SPAWN_EGG"
+    permission: "fancyelytra.particle.dolphin"
+    enabled: true
+    spawn-rate: 2
+
+  CAMPFIRE_COSY_SMOKE:
+    display-name: "&7Campfire Smoke"
+    description:
+      - "&7Cozy campfire smoke"
+      - "&7Warm and comfortable"
+    gui-item: "CAMPFIRE"
+    permission: "fancyelytra.particle.campfire_cosy_smoke"
+    enabled: true
+    spawn-rate: 3
+
+  ASH:
+    display-name: "&8Ash"
+    description:
+      - "&7Volcanic ash particles"
+      - "&7Post-apocalyptic style"
+    gui-item: "GUNPOWDER"
+    permission: "fancyelytra.particle.ash"
+    enabled: true
+    spawn-rate: 2
+
+  FALLING_DUST:
+    display-name: "&6Dust"
+    description:
+      - "&7Colorful dust particles"
+      - "&7Customizable colors"
+    gui-item: "SAND"
+    permission: "fancyelytra.particle.dust"
+    enabled: true
+    spawn-rate: 4
+
+  TOTEM:
+    display-name: "&aEmerald"
+    description:
+      - "&7Precious emerald particles"
+      - "&7Valuable and rare"
+    gui-item: "EMERALD"
+    permission: "fancyelytra.particle.emerald"
+    enabled: true
+    spawn-rate: 1
+
+  VILLAGER_ANGRY:
+    display-name: "&4Angry"
+    description:
+      - "&7Angry villager particles"
+      - "&7Show your frustration"
+    gui-item: "VILLAGER_SPAWN_EGG"
+    permission: "fancyelytra.particle.angry_villager"
+    enabled: true
+    spawn-rate: 1
+
+  ELECTRIC_SPARK:
+    display-name: "&eSpark"
+    description:
+      - "&7Electric spark particles"
+      - "&7High-energy flight"
+    gui-item: "LIGHTNING_ROD"
+    permission: "fancyelytra.particle.spark"
+    enabled: true
+    spawn-rate: 2
+
+  NONE:
+    display-name: "&7None"
+    description:
+      - "&7No particle effects"
+      - "&7Pure flight experience"
+    gui-item: "BARRIER"
+    permission: "fancyelytra.particle.none"
+    enabled: true
+    spawn-rate: 0
+
+# GUI Settings
+gui:
+  title: "&6&lFancy Elytra - Particle Selection"
+  size: 54 # Must be multiple of 9
+
+  # Navigation items
+  navigation:
+    previous-page:
+      item: "ARROW"
+      name: "&e← Previous Page"
+      slot: 45
+
+    next-page:
+      item: "ARROW"
+      name: "&eNext Page →"
+      slot: 53
+
+    close:
+      item: "BARRIER"
+      name: "&cClose Menu"
+      slot: 49
+
+  # Locked particle display
+  locked-particle:
+    name: "&c&l{particle} &7(Locked)"
+    lore:
+      - "&7You don't have permission"
+      - "&7Required: &c{permission}"
+      - ""
+      - "&cClick to see requirements"
+    item: "RED_STAINED_GLASS_PANE"
+
+  # Available particle display
+  available-particle:
+    name: "&a&l{particle}"
+    lore:
+      - "{description}"
+      - ""
+      - "&aClick to select this particle!"
+
+# Default particle for new elytras
+default-particle: "FLAME"
+
+# Particle rendering settings
+rendering:
+  # Particles per spawn cycle
+  particles-per-cycle: 1
+
+  # Offset from player position
+  offset:
+    x: 0.5
+    y: 0.0
+    z: 0.5
+
+  # Particle velocity
+  velocity:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+
+  # Additional particle data
+  extra: 0.0

@@ -1,0 +1,4 @@
+name: FancyElytras
+version: '1.0-SNAPSHOT'
+main: io.mewb.fancyElytras.FancyElytras
+api-version: '1.19'

@@ -1,0 +1,174 @@
+# Fuel System Configuration
+# Configure fuel mechanics and consumption
+
+# General fuel settings
+fuel:
+  # Enable/disable the fuel system entirely
+  enabled: true
+
+  # Maximum fuel capacity for elytras
+  max-capacity: 1000
+
+  # Starting fuel for new fancy elytras
+  starting-fuel: 1000
+
+  # Fuel consumption rates
+  consumption:
+    # Fuel consumed per tick while gliding (20 ticks = 1 second)
+    flight-per-tick: 1
+
+    # Fuel consumed for takeoff
+    takeoff-cost: 10
+
+    # Fuel consumed for high-speed flight (above normal speed)
+    high-speed-multiplier: 2.0
+
+    # Minimum fuel required for takeoff
+    min-fuel-for-takeoff: 50
+
+# Refueling system
+refueling:
+  # Enable/disable refueling
+  enabled: true
+
+  # Item-based refueling
+  items:
+    # Items that can be used as fuel
+    fuel-items:
+      COAL:
+        fuel-value: 10
+        display-name: "&8Coal"
+
+      CHARCOAL:
+        fuel-value: 8
+        display-name: "&8Charcoal"
+
+      COAL_BLOCK:
+        fuel-value: 90
+        display-name: "&8Coal Block"
+
+      BLAZE_POWDER:
+        fuel-value: 20
+        display-name: "&6Blaze Powder"
+
+      BLAZE_ROD:
+        fuel-value: 80
+        display-name: "&6Blaze Rod"
+
+      LAVA_BUCKET:
+        fuel-value: 200
+        display-name: "&6Lava Bucket"
+        return-item: "BUCKET" # Item returned after use
+
+      FIRE_CHARGE:
+        fuel-value: 15
+        display-name: "&6Fire Charge"
+
+    # Auto-refuel settings
+    auto-refuel:
+      enabled: true
+      # Automatically consume fuel items from inventory when fuel is low
+      auto-threshold: 100 # Auto-refuel when fuel drops below this
+      # Priority order for fuel items (highest priority first)
+      priority:
+        - "LAVA_BUCKET"
+        - "COAL_BLOCK"
+        - "BLAZE_ROD"
+        - "BLAZE_POWDER"
+        - "FIRE_CHARGE"
+        - "COAL"
+        - "CHARCOAL"
+
+# Fuel display settings
+display:
+  # How to show fuel in elytra lore
+  format:
+    # Fuel bar using characters
+    bar:
+      enabled: true
+      length: 20
+      filled-char: "█"
+      empty-char: "░"
+      filled-color: "&a"
+      empty-color: "&7"
+
+    # Numeric display
+    numeric:
+      enabled: true
+      format: "&7Fuel: &a{current}&7/&a{max}"
+
+    # Percentage display
+    percentage:
+      enabled: false
+      format: "&7Fuel: &a{percentage}%"
+
+  # Fuel level warnings
+  warnings:
+    # Warn when fuel is low
+    low-fuel:
+      enabled: true
+      threshold: 100 # Warn when fuel drops below this
+      message: "&e⚠ &7Your elytra fuel is running low! &e({fuel} remaining)"
+
+    # Warn when fuel is critically low
+    critical-fuel:
+      enabled: true
+      threshold: 25
+      message: "&c⚠ &7Your elytra fuel is critically low! &c({fuel} remaining)"
+
+    # Alert when out of fuel
+    no-fuel:
+      enabled: true
+      message: "&c⚠ &7Your elytra is out of fuel! Refuel to continue flying."
+
+# Fuel efficiency
+efficiency:
+  # Speed-based consumption
+  speed-based:
+    enabled: true
+    # Base consumption multiplier at normal speed
+    base-multiplier: 1.0
+    # Additional consumption per speed unit above normal
+    speed-penalty: 0.1
+
+  # Altitude-based consumption
+  altitude-based:
+    enabled: false
+    # Higher altitude = more fuel consumption
+    high-altitude-threshold: 200 # Y level
+    high-altitude-multiplier: 1.5
+
+  # Weather-based consumption
+  weather-based:
+    enabled: false
+    rain-multiplier: 1.2
+    storm-multiplier: 1.5
+
+# Emergency systems
+emergency:
+  # Emergency landing when out of fuel
+  emergency-landing:
+    enabled: true
+    # Gradual slowdown instead of immediate stop
+    gradual-slowdown: true
+    # Slowdown rate (velocity multiplier per tick)
+    slowdown-rate: 0.95
+
+  # Reserve fuel system
+  reserve-fuel:
+    enabled: false
+    # Amount of fuel reserved for emergency landing
+    reserve-amount: 50
+    # Can only be used for emergency landing
+    emergency-only: true
+
+# Performance settings
+performance:
+  # Update fuel display frequency (in ticks)
+  display-update-interval: 20
+
+  # Fuel calculation frequency (in ticks)
+  consumption-update-interval: 1
+
+  # Batch fuel updates for multiple players
+  batch-updates: true
