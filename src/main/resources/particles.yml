@@ -203,6 +203,300 @@ particles:
     enabled: true
     spawn-rate: 0
 
+  # Existing particles...
+  
+  # New particle effects
+  spark:
+    enabled: true
+    display-name: "&eSpark Trail"
+    description:
+      - "&7Bright sparkling particles"
+      - "&7that light up your flight!"
+    gui-item: "GLOWSTONE_DUST"
+    permission: "fancyelytra.particle.spark"
+    spawn-rate: 1
+    count: 2
+    offset-x: 0.2
+    offset-y: 0.2
+    offset-z: 0.2
+    speed: 0.05
+
+  cloud:
+    enabled: true
+    display-name: "&fCloud Trail"
+    description:
+      - "&7Fluffy white clouds"
+      - "&7follow your path!"
+    gui-item: "WHITE_WOOL"
+    permission: "fancyelytra.particle.cloud"
+    spawn-rate: 1
+    count: 3
+    offset-x: 0.3
+    offset-y: 0.1
+    offset-z: 0.3
+    speed: 0.02
+
+  snow:
+    enabled: true
+    display-name: "&fSnow Trail"
+    description:
+      - "&7Gentle snowflakes"
+      - "&7drift behind you!"
+    gui-item: "SNOWBALL"
+    permission: "fancyelytra.particle.snow"
+    spawn-rate: 1
+    count: 2
+    offset-x: 0.3
+    offset-y: 0.2
+    offset-z: 0.3
+    speed: 0.01
+
+  water_drop:
+    enabled: true
+    display-name: "&9Water Trail"
+    description:
+      - "&7Refreshing water droplets"
+      - "&7splash around you!"
+    gui-item: "WATER_BUCKET"
+    permission: "fancyelytra.particle.water"
+    spawn-rate: 1
+    count: 2
+    offset-x: 0.2
+    offset-y: 0.2
+    offset-z: 0.2
+    speed: 0.03
+
+  lava:
+    enabled: true
+    display-name: "&6Lava Trail"
+    description:
+      - "&7Hot lava droplets"
+      - "&7drip from your wings!"
+    gui-item: "LAVA_BUCKET"
+    permission: "fancyelytra.particle.lava"
+    spawn-rate: 1
+    count: 1
+    offset-x: 0.1
+    offset-y: 0.1
+    offset-z: 0.1
+    speed: 0.02
+
+  end_rod:
+    enabled: true
+    display-name: "&fMystic Trail"
+    description:
+      - "&7Mystical end rod particles"
+      - "&7illuminate your journey!"
+    gui-item: "END_ROD"
+    permission: "fancyelytra.particle.endrod"
+    spawn-rate: 1
+    count: 2
+    offset-x: 0.2
+    offset-y: 0.2
+    offset-z: 0.2
+    speed: 0.04
+
+  soul:
+    enabled: true
+    display-name: "&3Soul Trail"
+    description:
+      - "&7Ethereal soul particles"
+      - "&7follow your spirit!"
+    gui-item: "SOUL_SAND"
+    permission: "fancyelytra.particle.soul"
+    spawn-rate: 1
+    count: 2
+    offset-x: 0.2
+    offset-y: 0.3
+    offset-z: 0.2
+    speed: 0.05
+
+  totem:
+    enabled: true
+    display-name: "&6Totem Trail"
+    description:
+      - "&7Protective totem particles"
+      - "&7guard your flight!"
+    gui-item: "TOTEM_OF_UNDYING"
+    permission: "fancyelytra.particle.totem"
+    spawn-rate: 1
+    count: 3
+    offset-x: 0.3
+    offset-y: 0.3
+    offset-z: 0.3
+    speed: 0.06
+
+  dragon_breath:
+    enabled: true
+    display-name: "&5Dragon Trail"
+    description:
+      - "&7Powerful dragon breath"
+      - "&7swirls behind you!"
+    gui-item: "DRAGON_BREATH"
+    permission: "fancyelytra.particle.dragon"
+    spawn-rate: 1
+    count: 2
+    offset-x: 0.2
+    offset-y: 0.2
+    offset-z: 0.2
+    speed: 0.03
+
+  firework:
+    enabled: true
+    display-name: "&cF&6i&er&ae&bw&9o&dr&5k &cTrail"
+    description:
+      - "&7Explosive firework sparks"
+      - "&7burst behind you!"
+    gui-item: "FIREWORK_ROCKET"
+    permission: "fancyelytra.particle.firework"
+    spawn-rate: 1
+    count: 5
+    offset-x: 0.4
+    offset-y: 0.3
+    offset-z: 0.4
+    speed: 0.1
+
+  galaxy:
+    enabled: true
+    display-name: "&0G&1a&2l&3a&4x&5y &6Trail"
+    description:
+      - "&7Stars and cosmic dust"
+      - "&7follow your cosmic journey!"
+    gui-item: "NETHER_STAR"
+    permission: "fancyelytra.particle.galaxy"
+    spawn-rate: 1
+    count: 3
+    offset-x: 0.5
+    offset-y: 0.3
+    offset-z: 0.5
+    speed: 0.02
+
+  lightning:
+    enabled: true
+    display-name: "&eL&fi&eg&fh&et&fn&ei&fn&eg &eTrail"
+    description:
+      - "&7Electric sparks crackle"
+      - "&7with raw energy!"
+    gui-item: "LIGHTNING_ROD"
+    permission: "fancyelytra.particle.lightning"
+    spawn-rate: 1
+    count: 4
+    offset-x: 0.3
+    offset-y: 0.4
+    offset-z: 0.3
+    speed: 0.08
+
+  phoenix:
+    enabled: true
+    display-name: "&6P&ch&6o&ce&6n&ci&6x &cTrail"
+    description:
+      - "&7Rise like a phoenix"
+      - "&7with fiery rebirth!"
+    gui-item: "PHOENIX_FEATHER"
+    permission: "fancyelytra.particle.phoenix"
+    spawn-rate: 1
+    count: 6
+    offset-x: 0.6
+    offset-y: 0.4
+    offset-z: 0.6
+    speed: 0.05
+
+  void:
+    enabled: true
+    display-name: "&8V&0o&8i&0d &8Trail"
+    description:
+      - "&7Dark void energy"
+      - "&7consumes your path!"
+    gui-item: "OBSIDIAN"
+    permission: "fancyelytra.particle.void"
+    spawn-rate: 1
+    count: 3
+    offset-x: 0.3
+    offset-y: 0.3
+    offset-z: 0.3
+    speed: 0.03
+
+  aurora:
+    enabled: true
+    display-name: "&aA&bu&dr&eo&fr&aa &bTrail"
+    description:
+      - "&7Beautiful aurora lights"
+      - "&7dance in your wake!"
+    gui-item: "PRISMARINE_CRYSTALS"
+    permission: "fancyelytra.particle.aurora"
+    spawn-rate: 1
+    count: 4
+    offset-x: 0.4
+    offset-y: 0.2
+    offset-z: 0.4
+    speed: 0.04
+
+  divine:
+    enabled: true
+    display-name: "&fD&ei&fv&ei&fn&ee &fTrail"
+    description:
+      - "&7Holy light emanates"
+      - "&7from your divine presence!"
+    gui-item: "BEACON"
+    permission: "fancyelytra.particle.divine"
+    spawn-rate: 1
+    count: 5
+    offset-x: 0.3
+    offset-y: 0.5
+    offset-z: 0.3
+    speed: 0.06
+
+  storm:
+    enabled: true
+    display-name: "&8S&7t&8o&7r&8m &7Trail"
+    description:
+      - "&7Thunder clouds gather"
+      - "&7in your stormy wake!"
+    gui-item: "GRAY_STAINED_GLASS"
+    permission: "fancyelytra.particle.storm"
+    spawn-rate: 1
+    count: 4
+    offset-x: 0.5
+    offset-y: 0.3
+    offset-z: 0.5
+    speed: 0.07
+
+  crystal:
+    enabled: true
+    display-name: "&bC&fr&by&fs&bt&fa&bl &bTrail"
+    description:
+      - "&7Crystalline shards"
+      - "&7shimmer behind you!"
+    gui-item: "AMETHYST_SHARD"
+    permission: "fancyelytra.particle.crystal"
+    spawn-rate: 1
+    count: 3
+    offset-x: 0.3
+    offset-y: 0.3
+    offset-z: 0.3
+    speed: 0.05
+
+  meteor:
+    enabled: true
+    display-name: "&6M&ce&6t&ce&6o&cr &6Trail"
+    description:
+      - "&7Blazing meteor shower"
+      - "&7follows your flight!"
+    gui-item: "FIRE_CHARGE"
+    permission: "fancyelytra.particle.meteor"
+    spawn-rate: 1
+    count: 4
+    offset-x: 0.4
+    offset-y: 0.2
+    offset-z: 0.4
+    speed: 0.09
+  
+  
+  
+  
+  # Note: Some particles might not work on older server versions
+  # The plugin will handle fallbacks automatically
+
 # GUI Settings
 gui:
   title: "&6&lFancy Elytra - Particle Selection"
@@ -224,6 +518,7 @@ gui:
       item: "BARRIER"
       name: "&cClose Menu"
       slot: 49
+      
 
   # Locked particle display
   locked-particle:

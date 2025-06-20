@@ -15,16 +15,40 @@ fuel:
   # Fuel consumption rates
   consumption:
     # Fuel consumed per tick while gliding (20 ticks = 1 second)
-    flight-per-tick: 1
+    # Reduced from 1 to 0.2 to make fuel last 5x longer
+    flight-per-tick: 0.2
 
     # Fuel consumed for takeoff
-    takeoff-cost: 10
+    # Reduced from 10 to 5
+    takeoff-cost: 5
 
     # Fuel consumed for high-speed flight (above normal speed)
-    high-speed-multiplier: 2.0
+    # Reduced multiplier for acceleration
+    high-speed-multiplier: 1.5
 
     # Minimum fuel required for takeoff
-    min-fuel-for-takeoff: 50
+    # Reduced from 50 to 20
+    min-fuel-for-takeoff: 20
+
+# Acceleration system (new car-like system)
+acceleration:
+  # Enable gradual acceleration instead of instant boost
+  enabled: true
+
+  # Maximum speed multiplier that can be achieved
+  max-speed-multiplier: 2.5
+
+  # How much speed increases per tick when holding shift
+  acceleration-rate: 0.05
+
+  # How much speed decreases per tick when not holding shift
+  deceleration-rate: 0.03
+
+  # Minimum speed multiplier (base flying speed)
+  min-speed-multiplier: 1.0
+
+  # Fuel consumption multiplier based on current speed
+  fuel-consumption-multiplier: 1.2
 
 # Refueling system
 refueling:
@@ -107,13 +131,13 @@ display:
     # Warn when fuel is low
     low-fuel:
       enabled: true
-      threshold: 100 # Warn when fuel drops below this
+      threshold: 200 # Increased threshold since fuel lasts longer
       message: "&e⚠ &7Your elytra fuel is running low! &e({fuel} remaining)"
 
     # Warn when fuel is critically low
     critical-fuel:
       enabled: true
-      threshold: 25
+      threshold: 50 # Increased threshold
       message: "&c⚠ &7Your elytra fuel is critically low! &c({fuel} remaining)"
 
     # Alert when out of fuel
@@ -128,8 +152,8 @@ efficiency:
     enabled: true
     # Base consumption multiplier at normal speed
     base-multiplier: 1.0
-    # Additional consumption per speed unit above normal
-    speed-penalty: 0.1
+    # Reduced penalty for speed to make acceleration less fuel-hungry
+    speed-penalty: 0.05
 
   # Altitude-based consumption
   altitude-based:

@@ -1,4 +1,46 @@
 name: FancyElytras
-version: '1.0-SNAPSHOT'
+version: '1.0.0'
 main: io.mewb.fancyElytras.FancyElytras
 api-version: '1.19'
+authors: [MEWB]
+description: Advanced elytra enhancement plugin with particle effects and fuel system
+
+
+commands:
+  fancyelytra:
+    description: Main FancyElytras command
+    aliases: [fe, elytra]
+    usage: /<command> [subcommand]
+
+permissions:
+  fancyelytra.*:
+    description: All FancyElytra permissions
+    children:
+      fancyelytra.use: true
+      fancyelytra.admin: true
+      fancyelytra.particles.*: true
+      fancyelytra.takeoff: true
+      fancyelytra.fuel: true
+
+  fancyelytra.use:
+    description: Basic FancyElytra usage
+    default: true
+
+  fancyelytra.admin:
+    description: Administrative commands
+    default: op
+
+  fancyelytra.particles.*:
+    description: Access to all particle effects
+    default: op
+
+  fancyelytra.takeoff:
+    description: Ability to use takeoff feature
+    default: true
+
+  fancyelytra.fuel:
+    description: Ability to use fuel system
+    default: true
+
+depend: []
+softdepend: [Vault]

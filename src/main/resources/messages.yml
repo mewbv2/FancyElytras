@@ -4,13 +4,15 @@
 
 # General messages
 general:
-  prefix: "&8[&6FancyElytra&8] "
+  prefix: "&5[&dFancyElytras&5] &f"
+  no-elytra: "&cYou must be holding or wearing an elytra!"
   no-permission: "&cYou don't have permission to do that!"
   player-only: "&cThis command can only be used by players!"
   player-not-found: "&cPlayer '&7{player}&c' not found!"
   invalid-arguments: "&cInvalid arguments! Use &7{usage}"
   feature-disabled: "&cThis feature is currently disabled."
   world-disabled: "&cFancy elytras are disabled in this world."
+  error: "&cAn error occurred. Please try again."
 
 # Plugin status messages
 plugin:
@@ -22,9 +24,12 @@ plugin:
 # Command messages
 commands:
   help:
-    header: "&6&m----&r &6FancyElytra Commands &6&m----"
-    footer: "&6&m---------------------------------"
+    header: "&5&m-----&r &dFancyElytras Help &5&m-----"
+    footer: "&5&m--------------------------"
     command-format: "&e/{command} &7- &f{description}"
+    particle: "&e/fe particle &7- Open particle selection GUI"
+    fuel: "&e/fe fuel <amount> &7- Add fuel to your elytra"
+    reload: "&e/fe reload &7- Reload the plugin"
 
   give:
     success: "&aGave fancy elytra to &e{player}&a!"
@@ -35,8 +40,13 @@ commands:
   particle:
     no-elytra: "&cYou must be holding or wearing an elytra to change particles!"
     not-fancy: "&cThis elytra is not a fancy elytra!"
-    changed: "&aParticle effect changed to &e{particle}&a!"
+    changed: "&aParticle effect changed to: &f{particle}"
     gui-opened: "&aParticle selection menu opened!"
+    selected: "&aParticle effect set to: &f{particle}"
+    disabled: "&cParticle effects disabled"
+    usage: "&cUsage: /fe particle [particle_name]"
+    invalid: "&cInvalid particle type: &f{particle}"
+    list: "&aAvailable particles: &f{particles}"
 
   fuel:
     no-elytra: "&cYou must be holding or wearing an elytra to manage fuel!"
@@ -46,10 +56,16 @@ commands:
     no-fuel-items: "&cYou don't have any fuel items in your inventory!"
     insufficient-money: "&cYou need &e{cost} &cto purchase &e{amount} &cfuel!"
     purchased-fuel: "&aPurchased &e{amount} &afuel for &e{cost}&a!"
+    added: "&aAdded &f{amount} &afuel to your elytra!"
+    full: "&cYour elytra is already at maximum fuel!"
+    usage: "&cUsage: /fe fuel <amount>"
+
+  reload:
+    success: "&aFancyElytras reloaded successfully!"
 
 # Elytra system messages
 elytra:
-  created: "&aFancy elytra created successfully!"
+  created: "&aFancy Elytra created successfully!"
   converted: "&aYour elytra has been converted to a fancy elytra!"
   removed: "&cFancy elytra effects removed."
 
@@ -59,6 +75,9 @@ elytra:
     low: "&e⚠ Your elytra fuel is running low! &7({fuel} remaining)"
     critical: "&c⚠ Your elytra fuel is critically low! &7({fuel} remaining)"
     refill-auto: "&aAuto-refueled elytra using &e{items}x {item}"
+    added: "&aFuel added: &f{amount}"
+    depleted: "&cYour elytra is out of fuel!"
+
 
   # Takeoff messages
   takeoff:
@@ -69,9 +88,29 @@ elytra:
     cooldown: "&cYou must wait &e{seconds} &cseconds before taking off again!"
     no-space: "&cNot enough space above you for takeoff!"
     failed: "&cTakeoff failed!"
+  upgrade:
+    success: "&aElytra upgraded successfully!"
+    max-level: "&cYour elytra is already at maximum level!"
+
+# Fuel system messages (NEW SECTION)
+fuel:
+  # Auto-refuel messages
+  auto-refueled: "&aAuto-refueled elytra by &e{amount} &ausing &e{item}&a!"
+  refueled: "&aRefueled your elytra!"
+  refuel-failed: "&cRefuel failed - elytra is already full or item not recognized!"
+  insufficient-for-takeoff: "&cNot enough fuel for takeoff!"
+
+# Display warnings (NEW SECTION)
+display:
+  warnings:
+    low-fuel: "&e⚠ &7Your elytra fuel is running low! &e({fuel} remaining)"
+    critical-fuel: "&c⚠ &7Your elytra fuel is critically low! &c({fuel} remaining)"
+    no-fuel: "&c⚠ &7Your elytra is out of fuel! Refuel to continue flying."
 
 # GUI messages
 gui:
+  particle-selection:
+    title: "&5⚡ &dParticle Selection &5⚡"
   particle-menu:
     title: "&6&lParticle Selection"
 
@@ -109,6 +148,7 @@ errors:
   config: "&cConfiguration error. Please check your config files."
   permission: "&cPermission system error. Please contact an administrator."
   economy: "&cEconomy system error. Please contact an administrator."
+  general: "&cAn error occurred while processing your request."
 
   # Specific errors
   elytra-not-found: "&cCould not find elytra data!"
@@ -149,7 +189,7 @@ admin:
 updates:
   available: "&aA new version of FancyElytra is available!"
   current-version: "&7Current: &e{current}"
-  latest-version: "&7Latest: &a{latest}"
+  latest-version: "&a{latest}"
   download-url: "&7Download: &b{url}"
   no-updates: "&7You are running the latest version."
 
